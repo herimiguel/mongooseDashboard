@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+         <% for(var i in animal) { %> 
+
+     <h1>Edit: <%= animal[i].name %>!</h1>
+  <form action="/<%= animal[i].id %>" method='post'>
+    Name: <input type="text" name="name" value="<%= animal.name %>">
+    Description: <input type="text" name="description" value="<%= animal.description %>">
+    Food it Eats: <input type="text" name="food" value="<%= animal.food %>">
+    <input type="submit" value="Edit dog!">
+  </form>
+     <% } %> 
+
+  <a href="/">Home</a>
+</body>
+</html>

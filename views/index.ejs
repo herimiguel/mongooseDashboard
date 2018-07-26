@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1> ROOT PAGE!</h1>
+    <h1>Displaying all animals</h1> 
+    <a href="/createPage">Create a new animal</a>
+
+    <% for(var i in animal) { %>
+    <p>Name: <a href="/<%= animal[i]._id %>"><%= animal[i].name %></a> |
+       <a href="/<%= animal[i]._id %>/edit/">Edit Animal</a> |
+       <a href="/<%= animal[i]._id %>/delete/">Delete Animal</a> | 
+      <!-- <form action="/<%= animal[i]._id %>/delete/" method='post'>
+        <input type="submit" value="Delete">
+      </form> -->
+    </p>
+  <% } %>
+
+
+</body>
+</html>
